@@ -12,5 +12,10 @@ type CommentServiceImpl struct {
 }
 
 func (cs *CommentServiceImpl) GetComment(id int64) (*domain.Comment, error) {
-	return &domain.Comment{Id: id, Sender: "foo", Text: "bar"}, nil
+	return &domain.Comment{
+		CommentId: id,
+		ThreadId:  1234,
+		Sender:    "foo",
+		Text:      "bar",
+	}, nil
 }

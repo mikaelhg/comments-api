@@ -15,7 +15,7 @@ type CommentController interface {
 
 type CommentControllerImpl struct {
 	CommentController
-	commentService services.CommentService `di.inject:"commentService"`
+	commentService services.CommentService `di.inject:"commentsService"`
 }
 
 func (cc *CommentControllerImpl) GetComment(c echo.Context) error {
